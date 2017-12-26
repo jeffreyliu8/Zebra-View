@@ -52,7 +52,7 @@ A quick example is shown below:
         app:layout_constraintTop_toTopOf="parent" />
 ```
 
-![Output sample](https://github.com/jeffreyliu8/Native-Floyd-Steinberg-Dithering/blob/master/screenshot.png)
+![Output sample](https://github.com/jeffreyliu8/Zebra-View/blob/master/screenshot.png)
 
 Requirements
 --------------
