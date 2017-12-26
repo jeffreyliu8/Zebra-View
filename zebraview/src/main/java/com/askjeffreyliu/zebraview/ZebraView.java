@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
 
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 
 import android.view.View;
@@ -74,6 +76,28 @@ public class ZebraView extends View {
     public void setBarWidth(int widthInPixel) {
         barWidth = widthInPixel;
         invalidate();
+    }
+
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("superState", super.onSaveInstanceState());
+        bundle.putInt("color1", bar1Paint.getColor());
+        bundle.putInt("color2", bar2Paint.getColor());
+        bundle.putInt("barWidth", barWidth);
+        return bundle;
+    }
+
+    @Override
+    public void onRestoreInstanceState(Parcelable state) {
+        if (state instanceof Bundle) {
+            Bundle bundle = (Bundle) state;
+            this.bar1Paint.setColor(bundle.getInt("color1"));
+            this.bar2Paint.setColor(bundle.getInt("color2"));
+            this.barWidth = bundle.getInt("barWidth");
+            state = bundle.getParcelable("superState");
+        }
+        super.onRestoreInstanceState(state);
     }
 
     @Override
