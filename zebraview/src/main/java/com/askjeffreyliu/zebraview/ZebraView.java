@@ -65,6 +65,17 @@ public class ZebraView extends View {
         height = h;
     }
 
+    public void setColors(int color1, int color2) {
+        bar1Paint.setColor(color1);
+        bar2Paint.setColor(color2);
+        invalidate();
+    }
+
+    public void setBarWidth(int widthInPixel) {
+        barWidth = widthInPixel;
+        invalidate();
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
