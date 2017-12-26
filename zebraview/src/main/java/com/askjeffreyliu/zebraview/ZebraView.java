@@ -10,7 +10,6 @@ import android.graphics.Point;
 
 import android.util.AttributeSet;
 
-import android.util.Log;
 import android.view.View;
 
 /**
@@ -70,7 +69,7 @@ public class ZebraView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawPaint(bar2Paint);
-        if (width > 0 && height > 0) {
+        if (width > 0 && height > 0 && barWidth > 0) {
             for (int i = 0; i <= (width + height) / barWidth; i = i + 2) {
                 Point a1 = new Point(0, barWidth * i);
                 Point b1 = new Point(0, barWidth + barWidth * i);
