@@ -33,7 +33,7 @@ Using NFSD
 ##### Dependencies
 ```groovy
 	dependencies {
-	        compile 'com.github.jeffreyliu8:Zebra-View:v0.0.3'
+	        compile 'com.github.jeffreyliu8:Zebra-View:v0.0.5'
 	}
 ```
 
