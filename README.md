@@ -16,7 +16,7 @@ Todo
 Angles, number of strips, 
 
 
-Using NFSD
+Using ZebraView
 ----------------
 
 ### Setup
